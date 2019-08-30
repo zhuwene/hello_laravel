@@ -233,5 +233,6 @@ return [
         'View' => Illuminate\Support\Facades\View::class,
 
     ],
-
+    //未支付关闭订单
+    'order_ttl' => 1800,
 ];
