@@ -63,6 +63,8 @@ Route::group(['middleware' => ['auth', 'verified']], function() {
     Route::get('orders/{order}/review', 'OrdersController@review')->name('orders.review.show');
     //提交评价
     Route::post('orders/{order}/review', 'OrdersController@sendReview')->name('orders.review.store');
+    //提交退款
+    Route::post('orders/{order}/apply_refund', 'OrdersController@applyRefund')->name('orders.apply_refund');
 });
 
 Route::get('products/{product}', 'ProductsController@show')->name('products.show');
