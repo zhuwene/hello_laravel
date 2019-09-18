@@ -19,9 +19,11 @@ class VerifyCsrfToken extends Middleware
      * @var array
      */
     protected $except = [
-        //支付宝回调白名单
+        // 支付宝支付回调
         'payment/alipay/notify',
-        //微信回调白名单
+        // 微信支付回调
         'payment/wechat/notify',
+        // 微信退款回调
+        'payment/wechat/refund_notify',
     ];
 }
